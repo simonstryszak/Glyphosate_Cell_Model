@@ -17,26 +17,14 @@ energy and building blocks over time.
 
 The degradation pathway modeled is:
 
-```
-Glyphosate (external)
-   │  GltT transporter (uptake)
-   ▼
-Glyphosate (internal)
-   │  GOX (glyphosate oxidase)
-   ▼
-AMPA
-   │  Transaminase (ping-pong mechanism, consumes pyruvate)
-   ▼
-CHOPO3 (formylphosphonate)
-   │  Phosphonatase
-   ▼
-HCHO (formaldehyde)
-   │  Formaldehyde dehydrogenase
-   ▼
-Formate
-   │  Formate dehydrogenase
-   ▼
-Inert product  →  bulk remediation yield
+```mermaid
+flowchart TD
+    A[Glyphosate · external] -->|GltT transporter — uptake| B[Glyphosate · internal]
+    B -->|GOX — glyphosate oxidase| C[AMPA]
+    C -->|Transaminase — ping-pong, consumes pyruvate| D[CHOPO3 · formylphosphonate]
+    D -->|Phosphonatase| E[HCHO · formaldehyde]
+    E -->|Formaldehyde dehydrogenase| F[Formate]
+    F -->|Formate dehydrogenase| G[Inert product → bulk remediation yield]
 ```
 
 Everything is expressed as a system of coupled ODEs and integrated with stiff

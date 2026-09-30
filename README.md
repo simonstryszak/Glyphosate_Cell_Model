@@ -116,7 +116,3 @@ the top of each model cell and can be edited there.
   sensitivity analysis.
 - Results are computational predictions intended to compare design strategies,
   not validated experimental measurements.
-
-## Author
-
-Simon Stryszak
